@@ -26,6 +26,18 @@ const HomePage: React.FC = () => {
 
 
       {/* Featured Events Section */}
+      <section>
+        <h2 className="text-3xl font-bold mb-8 text-center">Featured Events</h2>
+        {loading ? (
+          <p className="text-center">Loading featured events...</p>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredEvents.map(event => (
+              <EventCard key={event.id} event={event} />
+            ))}
+          </div>
+        )}
+      </section>
 
     </div>
   );
