@@ -53,6 +53,39 @@ const EventDetailPage: React.FC = () => {
   });
 
 // add return
+return (
+    <>
+      <div className="bg-light-card dark:bg-dark-card rounded-lg shadow-xl overflow-hidden">
+        <img className="w-full h-64 md:h-96 object-cover" src={event.imageUrl} alt={event.name} />
+        <div className="p-8 md:p-12">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">{event.name}</h1>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-6 text-lg text-gray-600 dark:text-gray-300">
+            <span className="font-semibold">📅 {formattedDate}</span>
+            <span className="font-semibold">🕒 {formattedTime}</span>
+            <span className="font-semibold">📍 {event.location}</span>
+          </div>
+          <p className="text-lg leading-relaxed whitespace-pre-line">
+            {event.longDescription}
+          </p>
+          <div className="mt-10 text-center">
+            <button
+              onClick={() => setShowRegistration(true)}
+              className="bg-secondary text-white font-bold py-4 px-10 text-xl rounded-full hover:bg-green-600 transition-transform transform hover:scale-105 duration-300 shadow-lg"
+            >
+              Register for this Event
+            </button>
+          </div>
+        </div>
+      </div>
+      {showRegistration && (
+        <RegistrationForm 
+          eventId={event.id} 
+          eventName={event.name}
+          onClose={() => setShowRegistration(false)} 
+        />
+      )}
+    </>
+  )
 
 };
 
