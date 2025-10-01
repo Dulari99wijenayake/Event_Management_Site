@@ -30,10 +30,9 @@ const HomePage: React.FC = () => {
 
       {/* Countdown Section */}
       {nextEvent && (
-        <section className="flex flex-col items-center py-10">
-          <h2 className="text-3xl font-bold mb-4 text-primary">
-            Next Event: {nextEvent.name}
-          </h2>
+        <section className="flex flex-col items-center py-10 text-center">
+          <h2 className="text-3xl font-bold mb-2">Don't Miss Out!</h2>
+          <p className="text-xl mb-4 text-primary">{nextEvent.name}</p>
           <CountdownTimer targetDate={nextEvent.date} />
           <p className="mt-2 text-gray-600 dark:text-gray-300">
             {nextEvent.location} &mdash; {new Date(nextEvent.date).toLocaleString()}
