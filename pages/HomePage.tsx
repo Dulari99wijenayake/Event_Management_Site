@@ -16,6 +16,13 @@ const HomePage: React.FC = () => {
 
 
       {/* Countdown Section */}
+      {nextEvent && (
+         <section className="text-center">
+            <h2 className="text-3xl font-bold mb-2">Don't Miss Out!</h2>
+            <p className="text-xl mb-6 text-primary">{nextEvent.name}</p>
+            <CountdownTimer targetDate={nextEvent.date} />
+        </section>
+      )}
 
 
       {/* Featured Events Section */}
