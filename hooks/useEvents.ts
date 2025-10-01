@@ -20,7 +20,17 @@ const mockEvents: Event[] = [
     isFeatured: true,
   },
   // id 2
+  
   {
+    id: '2',
+    name: 'Tech Innovators Summit',
+    date: getFutureDate(25),
+    location: 'San Francisco, CA',
+    description: 'A summit for the brightest minds in technology and innovation.',
+    longDescription: 'Join visionaries, developers, and entrepreneurs at the Tech Innovators Summit. Discuss the future of AI, blockchain, and sustainable tech. Keynote speakers include leaders from top tech companies.',
+    imageUrl: 'https://picsum.photos/seed/techsummit/1200/800',
+    isFeatured: true,
+  },
 
     //id 3
 
