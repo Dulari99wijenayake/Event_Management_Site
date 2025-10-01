@@ -32,7 +32,16 @@ const mockEvents: Event[] = [
     isFeatured: true,
   },
 
-    //id 3
+  {
+    id: '3',
+    name: 'Local Music Fest',
+    date: getFutureDate(40),
+    location: 'City Park, Downtown',
+    description: 'Enjoy a weekend of live music from local bands and artists.',
+    longDescription: 'Our annual Local Music Fest is back! Featuring over 20 local bands across three stages, food trucks, and art installations. A perfect event for the whole family to enjoy the vibrant culture of our city.',
+    imageUrl: 'https://picsum.photos/seed/musicfest/1200/800',
+    isFeatured: false,
+  },
 
   {
     id: '4',
