@@ -1,0 +1,5 @@
+{
+  "name": "Event Horizon",
+  "description": "A modern, responsive event management platform where users can discover, view details, and register for upcoming events. Features include a countdown to the next event and seamless registration saved locally.",
+  "requestFramePermissions": []
+}
