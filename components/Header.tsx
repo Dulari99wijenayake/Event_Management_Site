@@ -30,6 +30,16 @@ const Header: React.FC = () => {
               Events
             </NavLink>
           </li>
+          <li>
+            <NavLink 
+              to="/about" 
+              className={({ isActive }) => 
+                `text-base font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
+              }
+            >
+              About Us
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
